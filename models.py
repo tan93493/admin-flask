@@ -27,7 +27,7 @@ class Product(BaseModel):
     price = Column(Float, default=0)
     active = Column(Boolean, default=True)
     create_date = Column(DateTime, default=datetime.now)
-    category_id = Column(Integer, ForeignKey('category.id'), nullable=False)
+    category_id = Column(Integer, ForeignKey('category.id'))
 
     def __str__(self):
         return self.name
